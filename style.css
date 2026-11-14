@@ -1,8 +1,4 @@
 
-/* =========================
-   GENERAL SETTINGS
-========================= */
-
 :root {
     --green: #263A2D;
     --cream: #F5EFE3;
@@ -160,6 +156,7 @@ a {
     font-size: 14px;
     font-weight: bold;
     transition: 0.3s;
+    margin-top: 20px;
 }
 
 .hero-button:hover {
@@ -440,7 +437,75 @@ a {
     padding: 85px 12%;
 }.about-purpose h2{
     font-family: Georgia, serif;
-    font-size: 3*px;
+    font-size: 30px;
     color: var(--green);
     margin-bottom: 20px;
 }
+@media (max-width: 750px) {
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 50px 20px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+}/* What Makes Us Special - 3 Cards */
+.values-section {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
+    padding: 50px 10%;
+}
+
+.value-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    align-items: center;
+}
+
+.value-card:last-child {
+    margin-top: 30px;
+}
+
+/* Mobile responsive */
+/* Tablet and smaller screens */
+@media (max-width: 900px) {
+    .values-section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 6%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 750px) {
+    .values-section {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .value-card:last-child {
+        margin-top: 0;
+    }
+}
+
+
+
